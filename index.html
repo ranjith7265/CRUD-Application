@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CRUD App</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,700;1,400&family=Caveat+Brush&family=Montserrat:wght@400;600&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <h1>CRUD</h1>
+        <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>About</li>
+        </ul>
+        <div class="container">
+            <div class="search-box">
+                <input type="text" id="search-box" class="search-box-input" placeholder="Search...">
+                <button id="search-button">
+                    <img src="./src/search.png" alt="Search">
+                </button>
+            <div>
+        </div>
+    </nav>
+    <section class="add-content">
+        <form id="add-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <button type="submit" id="add-btn">Add</button>
+        </form>
+    </section>
+    <section id="table-container">
+        <table id="data-table" class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div id="edit-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Edit Record</h2>
+                <form>
+                    <label for="edit-name">Name:</label>
+                    <input type="text" id="edit-name" name="edit-name" required>
+                    <label for="edit-email">Email:</label>
+                    <input type="email" id="edit-email" name="edit-email" required>
+                    <label for="edit-phone">Phone:</label>
+                    <input type="tel" id="edit-phone" name="edit-phone" required>
+                    <input type="hidden" id="edit-id">
+                    <button type="submit" id="edit-btn">Save Changes</button>
+                </form>
+            </div>
+        </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
